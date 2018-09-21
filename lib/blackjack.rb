@@ -4,8 +4,7 @@ def welcome
 end
 
 def deal_card
-  return 1 + rand(11)
-  
+  rand(1..11)
 end
 
 def display_card_total(card_total)
@@ -59,5 +58,13 @@ end
 
 def runner
   # code runner here
+  def runner
+  # code runner here	  welcome
+  hand=initial_round
+  until hand>21 do
+    hand=hit?(hand)
+    display_card_total(hand)
+  end
+  end_game(hand)
 end
     
