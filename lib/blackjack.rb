@@ -39,7 +39,7 @@ def hit?(number)
   if move == 's'
     number
   elsif move == 'h'
-    card_total += deal_card
+    number += deal_card
   end
 
 end
