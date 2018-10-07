@@ -51,7 +51,6 @@ end
 
 def runner
   welcome()
-  initial
   gountilround = initial_round
   until gountilround > 21
     gountilround = hit?(gountilround)
