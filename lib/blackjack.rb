@@ -56,6 +56,11 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome()
+  gountilround = initial_round
+  while gountilround > 21
+    gountilround = hit?(gountilround)
+    display_card_total(gountilround)
+  end
 end
     
