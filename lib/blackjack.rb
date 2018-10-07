@@ -62,5 +62,7 @@ def runner
     gountilround = hit?(gountilround)
     display_card_total(gountilround)
   end
+end_game(gountilround)
+end
 end
     
