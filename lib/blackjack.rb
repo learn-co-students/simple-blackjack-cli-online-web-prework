@@ -39,10 +39,7 @@ def hit?(number)
   if move == 's'
     card_total()
   elsif move == 'h'
-    counter = 0
-    while counter < 2 do
-    deal_card()
-    counter += 1
+    card_total() += deal_card()
   end
   else 
     invalid_command()
