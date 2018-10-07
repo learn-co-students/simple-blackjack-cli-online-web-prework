@@ -51,8 +51,9 @@ end
 
 def runner
   welcome()
+  initial
   gountilround = initial_round
-  while gountilround > 21
+  until gountilround > 21
     gountilround = hit?(gountilround)
     display_card_total(gountilround)
   end
