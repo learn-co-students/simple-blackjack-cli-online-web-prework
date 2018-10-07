@@ -29,13 +29,7 @@ end
 def initial_round
   cards = deal_card() + deal_card()
   display_card_total(cards)
-  while counter < 2 do  
-    deal_card()
-    deal_card()
-    display_card_total()
-    counter += 1
-  end
-  display_card_total()
+  cards
 end
 
 def hit?(number)
