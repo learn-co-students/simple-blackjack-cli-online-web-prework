@@ -41,10 +41,7 @@ def hit?(number)
   elsif move == 'h'
     card_total() += deal_card()
   end
-  else 
-    invalid_command()
-  
-  end
+
 end
 
 
