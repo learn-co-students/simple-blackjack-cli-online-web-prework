@@ -6,6 +6,13 @@ end
 def deal_card
   # code #deal_card here
   card = rand(1..11)
+  puts card
+  if card <= 6 
+    puts ("A low card")
+  else
+    puts ("It is a good Card")
+  end
+ 
   card
 end
 
@@ -21,9 +28,12 @@ def prompt_user
   puts ("Type 'h' to hit or 's' to stay")
 end
 
-def get_user_input
+def get_user_input(card_total)
   # code #get_user_input here
   move = gets.chomp
+  if card_total >= 17
+    puts ("you are a winer!")
+  end
   move
 end
 
@@ -44,7 +54,7 @@ end
 def hit?(card_total)
   # code hit? here
   prompt_user
-  move = get_user_input
+  move = get_user_input(card_total)
   if move == 'h'
     card = deal_card
     card_total = card_total + card
@@ -64,10 +74,12 @@ end
 def runner
   # code runner here
   welcome
-  initial_round
+  card_total = initial_round
   until card_total > 21
-    hit?(card_total)
-    display_card_total(card)
-    end_game(card_total)
+    card_total = hit?(card_total)
+    display_card_total(card_total)
+  end
+  end_game(card_total)
 end
     
+deal_card
