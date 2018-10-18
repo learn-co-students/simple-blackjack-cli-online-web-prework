@@ -31,9 +31,6 @@ end
 def get_user_input(card_total)
   # code #get_user_input here
   move = gets.chomp
-  if card_total >= 17
-    puts ("you are a winer!")
-  end
   move
 end
 
@@ -75,6 +72,13 @@ def runner
   # code runner here
   welcome
   card_total = initial_round
+  if move == s
+    if card_total >= 17
+      puts ("you are a winer!")
+      break
+    else
+      end_game(card_total)
+    end
   until card_total > 21
     card_total = hit?(card_total)
     display_card_total(card_total)
