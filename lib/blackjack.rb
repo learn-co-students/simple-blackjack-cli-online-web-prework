@@ -15,29 +15,35 @@ def prompt_user
 end
 
 def get_user_input
+  prompt_user
   gets.chomp
 end
 
-def end_game(card_total)
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+def end_game(card_total, dealer_total)
+  if card_total > 21
+    puts "You hit #{card_total}, busted!"
+  elsif dealer_total > 21
+    puts "You hit #{card_total}, dealer busts with #{dealer_total}, you win!"
+  elsif card_total > dealer_total
+    puts "You hit #{card_total}, dealer hit #{dealer_total}. You won!"
+  else
+    puts "You hit #{card_total}, dealer hit #{dealer_total}. Thanks for playing!"
+  end
 end
 
-def initial_round
+def initial_round(player = true)
   total = 0
   2.times do
     total += deal_card
   end
-  display_card_total(total)
+  if player
+    display_card_total(total)
+  end
   total
 end
 
-def hit?(total)
-  prompt_user
-  input = get_user_input
-  if input == 'h'
-    total += deal_card
-  end
-  total
+def hit(total)
+  total += deal_card
 end
 
 def invalid_command
@@ -51,9 +57,20 @@ end
 def runner
   welcome
   total = initial_round
-  until total > 21 do
-    total = hit?(total)
-    display_card_total(total)
+  dealer = initial_round(false)
+  puts "Dealer is showing #{dealer} (total)"
+
+  while dealer < 17 do
+    dealer = hit(dealer)
   end
-  end_game(total)
+
+  input = get_user_input
+  while input == 'h' do
+    total = hit(total)
+    break if total > 20
+    display_card_total(total)
+    input = get_user_input
+  end
+
+  end_game(total, dealer)
 end
