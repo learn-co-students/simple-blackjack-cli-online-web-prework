@@ -1,65 +1,68 @@
 def welcome
-  puts "Welcome to the Black jack Table"
+  puts "Welcome to the Blackjack Table"
 end
 
 def deal_card
   card = rand(1..11)
-  card_total = card += card
-  "Your cards add up to #{card_total}"
+  return card
 end
 
+def display_card_total(card_total)
+  
+  puts  "Your cards add up to #{card_total}"
+end
 
 def prompt_user
-  # code #prompt_user here
   puts "Type 'h' to hit or 's' to stay"
 end
 
 def get_user_input
-  # code #get_user_input here
-  gets.chomp
+  user_input = gets.chomp
 end
 
-def end_game
-  # code #end_game here
-  if card_total is >= 22
-    puts "Sorry, you hit #{card_total}. Thanks for playing!"
-  else 
-  prompt_user
+def end_game(card_total)
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
-  # code #initial_round here
-  deal_card(card) = hit1
-  deal_card(card) = hit2
-  display_card_total = hit1 + hit2
+  card_total = deal_card + deal_card
+  display_card_total(card_total)
+  card_total
 end
- 
-def hit?
-  # code hit? here
+
+def hit?(card_total)
   prompt_user
-  gets.chomp = input
-  if input == 'h'
-puts  deal_card += display_card_total
-  elsif input == 's'
-  prompt_user
-else 
-  puts "Please enter a valid command"
-  prompt_user
+  input = get_user_input
   
-end
-
-
-
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
-
-def runner
-  # code runner here
-  welcome
-  deal_card
-  prompt_user
-  initial_round
-  hit?
-end
+  if input == "h"
+    card_total += deal_card
+  elsif input == "s"
+    card_total
+  else 
+    puts "Please enter a valid command"
+    prompt_user
+    card_total
+  end
     
+  end
+  
+  
+  def runner
+    welcome
+    card_total = initial_round
+   until card_total > 21
+    card_total = hit?(card_total)
+    display_card_total(card_total)
+  end
+    end_game(card_total)
+  end
+
+    
+    
+    
+    
+    
+    
+    
+
+  
