@@ -39,7 +39,7 @@ def hit?(card_total)
     return card_total
   else
     invalid_command
-    # hit?(card_total)
+    hit?(card_total)
   end
 end
 
