@@ -44,7 +44,7 @@ def hit?(card_total)
   answer = get_user_input
   card_total
   
-  until  answer = "h" || answer = "s"  
+  until answer == "s" || answer == "h"
     invalid_command
     prompt_user
     answer = get_user_input
