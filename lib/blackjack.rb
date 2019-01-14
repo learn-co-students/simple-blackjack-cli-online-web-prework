@@ -35,28 +35,33 @@ def initial_round
   card_total
 end
 
+def invalid_command
+    puts "Please enter a valid command"
+end
+  
 def hit?(card_total)
   prompt_user
   answer = get_user_input
-   until  answer = "s" || answer = "h"
-   invalid_command
-     prompt_user
-     answer = get_user_input
-      card_total
-     if answer == "h"
-       card_total += deal_card
-       card_total
-       prompt_user
-   #  binding.pry
+  card_total
+  
+  until  answer = "s" || answer = "h"
+    invalid_command
+    prompt_user
+    answer = get_user_input
+  end
+    
+  if answer == "h"
+     card_total += deal_card
+     
+  elsif answer == "s"
+     card_total 
+  end
 end
-end
-end
-# if answer == "s"
-# card_total
+
 #   elsif answer == "h"
 #   card_total += deal_card
 # binding.pry
-  #hit?(card_total) 
+ # #hit?(card_total) 
   
 #end
   #recursion
