@@ -7,11 +7,11 @@ def deal_card
 end
 
 def display_card_total(number)
-  "Your cards add up to #{number}"
+  puts "Your cards add up to #{number}"
 end
 
 def prompt_user
-  puts "Type 'h' to hit or 's' to stay."
+  puts "Type 'h' to hit or 's' to stay"
 end
 
 def get_user_input
@@ -23,15 +23,24 @@ def end_game(number)
 end
 
 def initial_round
-  # code #initial_round here
+  number = deal_card + deal_card
+  display_card_total(number)
+  return number
 end
 
-def hit?
-  # code hit? here
+def hit?(number)
+  prompt_user
+  action = get_user_input
+  if action == 'h' then deal_card + number
+  elsif action != 's' || 'h' then invalid_command
+  else display_card_total
+  end
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command"
+  prompt_user
+  get_user_input
 end
 
 #####################################################
