@@ -31,16 +31,17 @@ end
 def hit?(number)
   prompt_user
   action = get_user_input
-  if action == 'h' then deal_card + number
-  elsif action != 's' || 'h' then invalid_command
-  else display_card_total
-  end
+    if action == 's' then return number
+    elsif action == 'h' then deal_card + number
+    else  invalid_command
+    end
 end
 
 def invalid_command
   puts "Please enter a valid command"
   prompt_user
   get_user_input
+  hit?
 end
 
 #####################################################
@@ -48,6 +49,11 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  initial_round
+  until hit? > 21
+    hit?
+  end
+  
 end
     
