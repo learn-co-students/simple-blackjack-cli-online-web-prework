@@ -50,10 +50,12 @@ end
 
 def runner
   welcome
-  initial_round
-  until hit? > 21
-    hit?
+  variable = initial_round
+  until
+  variable > 21
+  variable = hit?(variable)
   end
-  
+  puts "Your cards add up to #{variable}"
+  puts "Sorry, you hit #{variable}. Thanks for playing!"
 end
     
