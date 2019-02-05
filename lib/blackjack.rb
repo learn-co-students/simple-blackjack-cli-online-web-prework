@@ -11,8 +11,8 @@ def deal_card
   
  
 
-def display_card_total(7)
-  
+def display_card_total(num)
+ puts  
   
 end
 
