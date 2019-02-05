@@ -23,8 +23,9 @@ def get_user_input
   
 end
 
-def end_game
-  # code #end_game here
+def end_game(game)
+  puts "Sorry, you hit 27. Thanks for playing!"
+  
 end
 
 def initial_round
