@@ -8,11 +8,9 @@ def deal_card
   
   end
 
-  
- 
 
 def display_card_total(num)
- puts  
+ puts  hello
   
 end
 
@@ -29,6 +27,8 @@ def end_game
 end
 
 def initial_round
+  
+  puts "Your cards add up to "
   # code #initial_round here
 end
 
