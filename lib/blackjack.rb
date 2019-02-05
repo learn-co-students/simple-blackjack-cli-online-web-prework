@@ -29,11 +29,10 @@ def end_game(cardtotal)
 end
 
 def initial_round
-  deal_card + deal_card 
-  
-  
-  
-  
+  sum = deal_card + deal_card
+  puts "Your cards add up to #{sum}"
+  return sum
+
 end
 
 def hit?
