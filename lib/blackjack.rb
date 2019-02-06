@@ -11,8 +11,8 @@ def deal_card
 
 def display_card_total(num)
  puts "Your cards add up to #{num}"
-  
-end
+   
+ end
 
 def prompt_user
   puts "Type 'h' to hit or 's' to stay"  
@@ -37,11 +37,13 @@ def initial_round
 end
 
 def hit?(num)
-  prompt_user = get_user_input
+  prompt_user || get_user_input
   
   
-  # code hit? here
+  
+  
 end
+
 
 def invalid_command
   # code invalid_command here
