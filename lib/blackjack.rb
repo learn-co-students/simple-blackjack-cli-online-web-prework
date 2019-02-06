@@ -41,8 +41,9 @@ def hit?(num)
   
   if prompt_user = "s"
   return num
+else prompt_user = "h"
+  return deal_card
 end
-  
 
 
 end
