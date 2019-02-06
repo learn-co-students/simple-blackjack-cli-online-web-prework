@@ -33,14 +33,12 @@ def initial_round
   sum = deal_card + deal_card
   puts "Your cards add up to #{sum}"
   return sum
-  puts
-
+  
 end
 
-def hit?(prompt_user)
+def hit?(num)
   prompt_user = get_user_input
   
-  puts  "Type 'h' to hit or 's' to stay"
   
   # code hit? here
 end
