@@ -23,8 +23,8 @@ def get_user_input
   
 end
 
-def end_game(cardtotal)
-  puts "Sorry, you hit #{cardtotal}. Thanks for playing!"
+def end_game(card_total)
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
   
 end
 
@@ -39,7 +39,12 @@ end
 def hit?(num)
   prompt_user || get_user_input
   
+  if prompt_user = "s"
+  return num
+end
   
+
+
 end
 
 
