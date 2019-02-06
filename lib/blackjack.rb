@@ -37,7 +37,11 @@ def initial_round
 
 end
 
-def hit?
+def hit?(prompt_user)
+  prompt_user = get_user_input
+  
+  puts "Type 'h' to hit or 's' to stay"
+  
   # code hit? here
 end
 
