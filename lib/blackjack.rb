@@ -40,8 +40,6 @@ def hit?(num)
   prompt_user || get_user_input
   
   
-  
-  
 end
 
 
