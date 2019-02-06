@@ -40,7 +40,7 @@ end
 def hit?(prompt_user)
   prompt_user = get_user_input
   
-  puts "Type 'h' to hit or 's' to stay"
+  puts  "Type 'h' to hit or 's' to stay"
   
   # code hit? here
 end
