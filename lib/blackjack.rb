@@ -49,7 +49,7 @@ def invalid_command
 end
 
 #####################################################
-# get every test to pass beforecoding runner below #
+# get every test to pass beforecoding runnerbelow #
 #####################################################
 
 def runner
