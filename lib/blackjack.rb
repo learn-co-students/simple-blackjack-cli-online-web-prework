@@ -23,9 +23,7 @@ def end_game (number)
 end
 
 def initial_round
-  deal_card
   card1 = deal_card
-  deal_card
   card2 = deal_card
   total = card1 + card2
   display_card_total (total)
@@ -51,16 +49,13 @@ def invalid_command
   puts "Please enter a valid command"
 end
 
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
-
 def runner
-  welcome
-  number=initial_round
+  welcome 
+  number = initial_round
   until number == 21
-  hit?(number)
+  card_value = hit?(number)
+  display_card_total (card_value)
   end
-end_game (number)
+  end_game (number)
 end
     
