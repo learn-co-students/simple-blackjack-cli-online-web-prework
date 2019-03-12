@@ -23,18 +23,26 @@ def end_game(card_total)
     puts "Sorry, you hit #{card_total}. Thanks for playing!" # code #end_game here
   else
     prompt_user
+  end
 end
 
 def initial_round
-  display_card_total(deal_card() + deal_card()) # code #initial_round here
+  first_card = deal_card()
+  second_card = deal_card()
+  card_total = first_card + second_card
+  display_card_total(card_total)
+  card_total
 end
 
 def hit?(card_total)
-  prompt_user
-  get_user_input
-  if get_user_input = "h"
-    display_card_total(card_total + deal_card)
-  else # code hit? here
+  prompt_user()
+  if get_user_input() == "h"
+    hit_card = deal_card()
+    new_card_total = card_total + hit_card
+    new_card_total
+  else
+    card_total
+  end
 end
 
 def invalid_command
@@ -46,8 +54,13 @@ end
 #####################################################
 
 def runner
-##  welcome
-##  initial_round
-##  hit?
-##  display_card_total() # code runner here
+  welcome()
+  card_total = 0
+  initial_card_total = initial_round()
+  until card_total > 21 do
+    hit_card_total = hit?(initial_card_total)
+    display_card_total(hit_card_total)
+    card_total = hit_card_total
+  end
+  end_game(card_total)
 end
