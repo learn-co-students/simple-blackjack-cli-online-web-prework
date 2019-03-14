@@ -12,7 +12,6 @@ end
 
 def prompt_user
    puts "Type 'h' to hit or 's' to stay"
-
 end
 
 def get_user_input
@@ -40,7 +39,7 @@ def hit? (num)
       invalid_command
       prompt_user
    end
-   num 
+   num
 end
 
 def invalid_command
@@ -54,10 +53,10 @@ end
 
 def runner
   welcome
-  card_total = initial_round 
+  card_total = initial_round
   until card_total > 21
       card_total = hit?(card_total)
       display_card_total(card_total)
    end
-   end_game(card_total)  
+   end_game(card_total)
 end
