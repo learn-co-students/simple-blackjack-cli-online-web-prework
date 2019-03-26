@@ -45,23 +45,22 @@ end
 def invalid_command
   # code invalid_command here
   puts "Please enter a valid command"
+  prompt_user
+  get_user_input
 end
 
 def hit?(hitme)
 prompt_user
 answer = get_user_input
 if answer == 's'
-card = initial_round
-return card
+hitme
 elsif answer == 'h'
 new = deal_card
-card = hitme + new
-return card
+hitme += new
 else
 invalid_command
-prompt_user
 end
-display_card_total(card)
+#display_card_total(card)
 end 
 
 
@@ -71,15 +70,12 @@ end
 #####################################################
 
 def runner
- welcome
-card = 0
+welcome
+card = initial_round
 until card > 21
-newcard = hit?(card)
-card += newcard
+card = hit?(card)
 display_card_total(card)
 end 
-return card
- 
-return end_game
+return end_game(card)
 end
     
