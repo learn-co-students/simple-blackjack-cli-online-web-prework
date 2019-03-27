@@ -1,17 +1,19 @@
 def welcome
-  # code #welcome here
+  puts "Welcome to the BlackJack Table"
 end
 
-def deal_card
-  # code #deal_card here
+def deal_card(card = 0)
+  card = 1..11
+  puts "#{card}"
 end
 
-def display_card_total
-  # code #display_card_total here
+def display_card_total(card total)
+  puts "Your cards add up to #{card total}"
 end
 
 def prompt_user
-  # code #prompt_user here
+  print "type 'h' to hit or 's' to stay"
+  gets.chomp
 end
 
 def get_user_input
