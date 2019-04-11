@@ -36,18 +36,9 @@ if input == "h"
 elsif input == "s"
  current_total
 
-
 end
 end
 
-
-  # if the user types and H
-  # do something here
-# elsif the user typs s
-# do something else
-# else
-
-end
 
 def invalid_command
   # code invalid_command here
@@ -58,5 +49,15 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  card_total= initial_round
+  until card_total > 21
+  card_total = hit?(card_total)
+  display_card_total(card_total)
+  end
+  end_game(card_total)
+
+  #display_card_total
+
+
 end
