@@ -1,4 +1,4 @@
-# Simplified Blackjack - Procedural
+what # Simplified Blackjack - Procedural
 
 ## Objective
 
