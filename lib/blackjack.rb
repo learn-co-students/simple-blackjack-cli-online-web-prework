@@ -36,6 +36,7 @@ def initial_round
   num1 = deal_card
   num2 = deal_card
   display_card_total(num1 + num2)
+  return (num1+num2)
 end
 
 def hit?(current_total)
@@ -44,7 +45,7 @@ def hit?(current_total)
   input = get_user_input
   if input == 's'
     return current_total
-  elseif input == 'h'
+  elsif input == 'h'
     num = deal_card
     return (current_total+num) 
   else
@@ -64,5 +65,14 @@ end
 
 def runner
   # code runner here
+  welcome 
+  num = initial_round
+  total = hit?(num)
+  display_card_total(total)
+  if total<=21
+    num1 = hit?(num)
+    total += num1
+  else end_game(total)
+  end
 end
     
