@@ -1,4 +1,4 @@
-# Simplified Blackjack - Procedural
+5TGR`# Simplified Blackjack - Procedural
 
 ## Objective
 
