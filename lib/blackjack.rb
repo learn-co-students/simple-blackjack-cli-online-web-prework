@@ -62,16 +62,3 @@ end
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
-
-def runner
-  # code runner here
-  welcome 
-  total = initial_round
-  until total > 21
-  total = hit?(total)
-  total = display_card_total(card_total)
-end
-  end_game(total)
-end
-
-runner
