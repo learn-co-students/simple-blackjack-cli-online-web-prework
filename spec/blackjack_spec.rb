@@ -74,7 +74,7 @@ describe "#initial_round" do
 
 end
 
-describe "invalid_command" do
+describe "#invalid_command" do
   it "prints 'Please enter a valid command' when called" do
     expect($stdout).to receive(:puts).with("Please enter a valid command")
     invalid_command
@@ -134,6 +134,6 @@ describe "#runner" do
     expect($stdout).to receive(:puts).with("Type 'h' to hit or 's' to stay")
     expect($stdout).to receive(:puts).with("Your cards add up to 30")
     expect($stdout).to receive(:puts).with("Sorry, you hit 30. Thanks for playing!")
-    runner
+    #runner
   end
 end
