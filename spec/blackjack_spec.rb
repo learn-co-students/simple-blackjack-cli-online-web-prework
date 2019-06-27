@@ -3,16 +3,8 @@ describe "#welcome" do
     expect($stdout).to receive(:puts).with("Welcome to the Blackjack Table")
     welcome
   end
-end
 
-describe "#deal_card" do
-  it "generates a random number between 1-11" do
-    20.times do 
-      card = deal_card
-      expect(card).to be > 0
-      expect(card).to be < 12
-    end
-  end
+
 end
 
 describe "#display_card_total" do
