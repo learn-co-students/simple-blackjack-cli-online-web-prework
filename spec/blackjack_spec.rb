@@ -1,7 +1,3 @@
-require_relative "./spec_helper.rb"
-require_relative "../lib/blackjack.rb"
-require_relative "../lib/runner.rb"
-
 
 describe "#welcome" do
   it "prints a welcome message to screen" do
@@ -135,6 +131,6 @@ describe "#runner" do
     expect($stdout).to receive(:puts).with("Type 'h' to hit or 's' to stay")
     expect($stdout).to receive(:puts).with("Your cards add up to 30")
     expect($stdout).to receive(:puts).with("Sorry, you hit 30. Thanks for playing!")
-    #runner
+    runner
   end
 end
