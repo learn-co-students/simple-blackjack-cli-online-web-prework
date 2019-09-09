@@ -1,3 +1,4 @@
+
 describe "#welcome" do
   it "prints a welcome message to screen" do
     expect($stdout).to receive(:puts).with("Welcome to the Blackjack Table")
@@ -70,7 +71,7 @@ describe "#initial_round" do
 
 end
 
-describe "invalid_command" do
+describe "#invalid_command" do
   it "prints 'Please enter a valid command' when called" do
     expect($stdout).to receive(:puts).with("Please enter a valid command")
     invalid_command
