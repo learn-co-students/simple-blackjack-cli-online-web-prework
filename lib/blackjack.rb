@@ -1,9 +1,12 @@
 def welcome
-  # code #welcome here
+  puts "Welcome to the Blackjack Table"# code #welcome here
 end
 
 def deal_card
-  # code #deal_card here
+  20.times do 
+      card = deal_card
+      card.to be > 0
+      card.to be < 12 # code #deal_card here
 end
 
 def display_card_total
